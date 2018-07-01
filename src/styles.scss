@@ -5,10 +5,30 @@
 
 // import our custom theme
 @import 'my-theme.scss';
+@import 'themes/black-theme.scss';
+@import 'themes/default-theme.scss';
+@import 'themes/light-theme.scss';
+@import 'themes/nature-theme.scss';
 
 // specify theme class eg: <body class="my-theme"> ... </body>
 .my-theme {
   
   // use our theme with angular-material-theme mixin
   @include angular-material-theme($my-theme);
+}
+
+.black-theme {
+  @include angular-material-theme($black-theme);
+}
+
+.default-theme {
+  @include angular-material-theme($default-theme);
+}
+
+.light-theme {
+  @include angular-material-theme($light-theme);
+}
+
+.nature-theme {
+  @include angular-material-theme($nature-theme);
 }
