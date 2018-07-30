@@ -1,9 +1,23 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+declare var require: any;
+const packageJson = require('../../package.json');
 
 export const environment = {
-  production: false
+  production: false,
+  versions: {
+    app: packageJson.version,
+    angular: packageJson.dependencies['@angular/core'],
+    ngrx: packageJson.dependencies['@ngrx/store'],
+    material: packageJson.dependencies['@angular/material'],
+    bootstrap: packageJson.dependencies.bootstrap,
+    rxjs: packageJson.dependencies.rxjs,
+    fontAwesome:
+      packageJson.dependencies['@fortawesome/fontawesome-svg-core'],
+    angularCli: packageJson.devDependencies['@angular/cli'],
+    typescript: packageJson.devDependencies['typescript']
+  }
 };
 
 /*

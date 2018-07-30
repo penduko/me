@@ -1,4 +1,5 @@
 @import '~@angular/material/theming';
+@import '~angular-mgl-timeline/theme';
 
 // always include only once per project
 @include mat-core();
@@ -10,6 +11,13 @@
 @import 'themes/light-theme.scss';
 @import 'themes/nature-theme.scss';
 
+@import 'style-reset.scss-theme.scss';
+
+// custom theme
+@mixin custom-components-theme($theme) {
+  @include anms-style-reset-theme($theme);
+}
+
 // specify theme class eg: <body class="my-theme"> ... </body>
 .my-theme {
   
@@ -19,16 +27,32 @@
 
 .black-theme {
   @include angular-material-theme($black-theme);
+
+  // inlcude other themes to other components
+  @include mgl-timeline-theme($black-theme);
+  @include custom-components-theme($black-theme);
 }
 
 .default-theme {
   @include angular-material-theme($default-theme);
+
+  // inlcude other themes to other components
+  @include mgl-timeline-theme($default-theme);
+  @include custom-components-theme($default-theme);
 }
 
 .light-theme {
   @include angular-material-theme($light-theme);
+
+  // inlcude other themes to other components
+  @include mgl-timeline-theme($light-theme);
+  @include custom-components-theme($light-theme);
 }
 
 .nature-theme {
   @include angular-material-theme($nature-theme);
+
+  // inlcude other themes to other components
+  @include mgl-timeline-theme($nature-theme);
+  @include custom-components-theme($nature-theme);
 }

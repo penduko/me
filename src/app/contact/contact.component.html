@@ -1,0 +1,40 @@
+<div class="container">
+  <div *ngIf="!messageSent">
+    <section class="mat-typography">
+      <h1>Hi there!</h1>
+      <p>
+        Want to tell me something interesting? Have a suggestion for me? I'd love to hear from you!
+      </p>
+    </section>
+
+    <form [formGroup]="contactForm" (ngSubmit)="sendMessage()">
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Your email address</mat-label>
+          <input matInput placeholder="example@email.com" formControlName="email">
+          <mat-error *ngIf="contactForm.invalid">{{getEmailErrorMessage()}}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Message</mat-label>
+          <textarea rows=5 matInput placeholder="" formControlName="message"></textarea>
+          <mat-error *ngIf="contactForm.invalid">{{getMessageErrorMessage()}}</mat-error>
+        </mat-form-field>
+
+        <button mat-stroked-button type="sumbit" [disabled]="!contactForm.valid">Send</button>
+      </div>
+    </form>
+  </div>
+
+  <div *ngIf="messageSent">
+    <section class="mat-typography">
+      <h1>Thanks!</h1>
+      <p>
+        Yay, I just got mail! Thanks for your message, I'll get back to you soon. In the meantime you might like to checkout my
+        <a mat-raised-button [routerLink]="['/blogs']" routerLinkActive="router-link-active">blogs</a>
+        or my
+        <a mat-raised-button [routerLink]="['/resources']" routerLinkActive="router-link-active">resources</a> it might help you.
+      </p>
+    </section>
+  </div>
+</div>

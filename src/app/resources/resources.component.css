@@ -1,0 +1,26 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+code {
+  position: absolute;
+  top: 35px;
+  right: 29px;
+  font-size: 10px;
+  float: right;
+  border-radius: 10px;
+  padding: 0 8px 1px;
+}
+
+mat-card {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+
+mat-card-subtitle {
+  min-height: 60px;
+}
+
+

@@ -1,0 +1,73 @@
+.circular {
+  background-image: url(https://scontent.fmnl4-6.fna.fbcdn.net/v/t1.0-9/22281637_1552399998116549_4665652416002165250_n.jpg?_nc_cat=0&_nc_eui2=AeGQPB8gCh9bIhdvsQvJJtOMGHnxiq62KFEQBXjLd4zQBqABn8scXlywECA3H31djFo4jJTWWXfNYvFaXjdHIELqVxKrJriqV5oFj2i4f7q_Tg&oh=6e53305fdec5b730f216808fc12b3756&oe=5BE33962);
+  width: 150px;
+  height: 150px;
+
+  /* browser prefixs for Safari and Chrome */
+  -webkit-border-radius: 60px;
+  -webkit-background-clip: padding-box;
+
+  /* browser prefixs for Mozilla */
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  background-size: cover;
+  background-position: center center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -60px;
+  position: relative;
+  border: 2px solid #eee;
+}
+
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  margin-bottom: 60px;
+}
+
+img {
+  border-radius: 2%;
+  margin-bottom: 30px;
+}
+
+section {
+  text-align: center;
+}
+
+/* clip text element */
+.clip-text {
+  font-size: 6em;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0.25em;
+  padding: 0.5em 0.75em;
+  text-align: center;
+
+  /* color fallback */
+  color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 
+  use Background-size cover for photo 
+  background and no-repeat background 
+*/
+.clip-text--cover,
+.clip-text--cover:before {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.clip-text_one {
+  /* background-image: url(https://4kwallpapers.co/wp-content/uploads/2015/09/abstract-colorful-vectors-design-4k-wallpapers.png); */
+  /* background-image: url(http://hd.wallpaperswide.com/thumbs/abstract_wallpaper_for_mac-t2.jpg); */
+  /* background-image: url(https://wallpaperbrowse.com/media/images/background-pictures-10.jpg); */
+  background-image: url(https://www.hdwallpapers.net/previews/3d-colorful-spiral-1057.jpg);
+  /* background-image: url(http://wallpaper-gallery.net/images/black-abstract-wallpaper/black-abstract-wallpaper-4.jpg); */
+}
